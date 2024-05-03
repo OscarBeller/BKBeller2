@@ -1,0 +1,50 @@
+<header>
+  <nav>
+    <h1>CODERHOUSE BACKEND OSCAR BELLER </h1>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/realTimeProducts">Real Time Products</a>
+      </li>
+    </ul>
+  </nav>
+  <hr />
+</header>
+
+<main>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th class="encabezado">Title</th>
+          <th class="encabezado">Description</th>
+          <th class="encabezado">Code</th>
+          <th class="encabezado">Price</th>
+          <th class="encabezado">Status</th>
+          <th class="encabezado">Stock</th>
+          <th class="encabezado">Category</th>
+          <th class="encabezado">Thumbnails</th>
+        </tr>
+      </thead>
+      <tbody id="productsContainer">
+        {{#each products}}
+          <tr>
+            <td>{{title}}</td>
+            <td>{{description}}</td>
+            <td>{{code}}</td>
+            <td>{{price}}</td>
+            <td>{{status}}</td>
+            <td>{{stock}}</td>
+            <td>{{category}}</td>
+            <td>{{thumbnails}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/main.js"></script>

@@ -1,0 +1,44 @@
+<header>
+  <nav>
+    <h1>OSCAR BELLER </h1>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/realTimeProducts">Real Time Products</a>
+      </li>
+    </ul>
+  </nav>
+  <hr />
+</header>
+<main>
+  <article id="products">
+
+    {{#each products}}
+      <div class="card cardEcommerce" style="width: 370px;height: 600px">
+        <img
+          src="
+      "
+          class="card-img-top style="
+          height="300rem"
+          alt={{description}}
+        />
+        <div class="card-body">
+          <p class="card-title fw-bold fs-5">{{title}}</p>
+          <p class="card-text"><small class="text-body-secondary">
+              {{description}}
+            </small></p>
+          <p class="card-text precio fw-bold">{{price}}</p>
+          <p class="card-text"><small class="text-body-secondary">
+              stock:
+              {{stock}}
+            </small></p>
+          <button id=`btnAdd-{{id}}` class="btn btn-success">Add</button>
+        </div>
+      </div>
+
+    {{/each}}
+
+  </article>
+</main>
